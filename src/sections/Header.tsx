@@ -19,7 +19,7 @@ export const Header = () => {
 <Image src={Logo} alt="Logo" width={40} height={40} />
 
 <MenuIcon className="w-4 h-4 md:hidden"/>
-<nav className="flex justify-center items-center text-black/60 gap-6 hidden md:flex">
+<nav className=" justify-center items-center text-black/60 gap-6 hidden md:flex">
   <a href="#">About</a>
   <a href="#">Features</a>
   <a href="#">Customers</a>
