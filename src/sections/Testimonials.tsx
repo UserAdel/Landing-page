@@ -72,13 +72,22 @@ const thirdcol=testimonials.slice(6,9)
 export const Testimonials = () => {
   return (
 <section>
-<div className="container justify-center flex mt-10">
+
+<div className="mt-12">
+  <div className="flex justify-center items-center mb-5">
+  <p className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight"> Testimonials</p>
+  </div>
+  <h3 className="section-title "> what our users say</h3>
+</div>
+
+
+
+<div className="container justify-center flex mt-10 [mask-image:linear-gradient(to_top,transparent,black,transparent)]">
 
 <div className="">
 {firstcol.map((testimonial) => (
-  <div className="card flex flex-col">  
+  <div className="card flex flex-col mt-10">  
     <p>{testimonial.text}</p>
-
 <div className=" flex mt-5">
     <img src={testimonial.imageSrc} alt={testimonial.name} width={40} height={40} className="pr-2"/>
 <div>
@@ -90,6 +99,40 @@ export const Testimonials = () => {
 ))}
 
 </div>
+
+
+
+
+
+
+<div className=" ml-5 hidden md:block">
+{secondcol.map((testimonial) => (
+  <div className="card flex flex-col mt-10">  
+    <p>{testimonial.text}</p>
+<div className=" flex mt-5">
+    <img src={testimonial.imageSrc} alt={testimonial.name} width={40} height={40} className="pr-2"/>
+<div>
+    <h4>{testimonial.name}</h4>
+    <span>{testimonial.username}</span>
+</div>
+  </div>
+</div>
+))} </div>
+
+<div className=" ml-5 hidden lg:block ">
+{thirdcol.map((testimonial) => (
+  <div className="card flex flex-col mt-10">  
+    <p>{testimonial.text}</p>
+<div className=" flex mt-5">
+    <img src={testimonial.imageSrc} alt={testimonial.name} width={40} height={40} className="pr-2"/>
+<div>
+    <h4>{testimonial.name}</h4>
+    <span>{testimonial.username}</span>
+</div>
+  </div>
+</div>
+))} </div>
+
 
 
 
