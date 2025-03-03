@@ -65,6 +65,36 @@ const testimonials = [
   },
 ];
 
+const firstcol=testimonials.slice(0,3)
+const secondcol=testimonials.slice(3,6)
+const thirdcol=testimonials.slice(6,9)
+
 export const Testimonials = () => {
-  return null;
+  return (
+<section>
+<div className="container justify-center flex mt-10">
+
+<div className="">
+{firstcol.map((testimonial) => (
+  <div className="card flex flex-col">  
+    <p>{testimonial.text}</p>
+
+<div className=" flex mt-5">
+    <img src={testimonial.imageSrc} alt={testimonial.name} width={40} height={40} className="pr-2"/>
+<div>
+    <h4>{testimonial.name}</h4>
+    <span>{testimonial.username}</span>
+</div>
+  </div>
+</div>
+))}
+
+</div>
+
+
+
+
+</div>
+</section>
+  );
 };
